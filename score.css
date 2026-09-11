@@ -1,0 +1,1451 @@
+/* =====================================================
+   WORDN'T — SCORE PAGE
+===================================================== */
+
+
+/* =====================================================
+   SCORE PAGE BACKGROUND
+===================================================== */
+
+.score-page {
+
+    min-height: 100vh;
+
+    margin: 0;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(245, 213, 224, 0.18),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(102, 103, 171, 0.25),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #210635,
+            #420D4B 45%,
+            #7B337E
+        );
+
+    color: #F5D5E0;
+
+    overflow-x: hidden;
+
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.score-page .navbar {
+
+    position: relative;
+
+    z-index: 20;
+
+    width: 100%;
+
+    min-height: 90px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    box-sizing: border-box;
+
+    padding: 0 7%;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(123, 51, 126, 0.95),
+            rgba(102, 103, 171, 0.85)
+        );
+
+    border-bottom-left-radius: 50% 25px;
+    border-bottom-right-radius: 50% 25px;
+
+}
+
+
+/* Logo */
+
+.score-page .nav-logo {
+
+    font-family: "Anta", sans-serif;
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    color: #F5D5E0;
+
+}
+
+
+/* Navigation */
+
+.score-page .nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 55px;
+
+}
+
+
+.score-page .nav-links a {
+
+    color: #F5D5E0;
+
+    text-decoration: none;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+
+}
+
+
+.score-page .nav-links a:hover {
+
+    color: white;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =====================================================
+   MAIN CONTAINER
+===================================================== */
+
+.score-container {
+
+    position: relative;
+
+    min-height: calc(100vh - 90px);
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 55px 20px 70px;
+
+}
+
+
+/* =====================================================
+   FLOATING LETTERS
+===================================================== */
+
+/*
+   These override the old .floating-letter
+   styles from style.css.
+*/
+
+.score-page .floating-letter {
+
+    position: absolute;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 18px;
+
+    font-family: "Baloo 2", cursive;
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    color: #F5D5E0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(123, 51, 126, 0.8),
+            rgba(102, 103, 171, 0.8)
+        );
+
+    border: 1px solid rgba(245, 213, 224, 0.35);
+
+    box-shadow:
+        0 10px 30px rgba(33, 6, 53, 0.35);
+
+    opacity: 0.55;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+}
+
+
+/* Individual positions */
+
+.score-page .letter-1 {
+
+    top: 160px;
+
+    left: 7%;
+
+    transform: rotate(-12deg);
+
+}
+
+
+.score-page .letter-2 {
+
+    top: 290px;
+
+    right: 8%;
+
+    transform: rotate(15deg);
+
+}
+
+
+.score-page .letter-3 {
+
+    bottom: 300px;
+
+    left: 10%;
+
+    transform: rotate(10deg);
+
+}
+
+
+.score-page .letter-4 {
+
+    bottom: 180px;
+
+    right: 12%;
+
+    transform: rotate(-15deg);
+
+}
+
+
+/* =====================================================
+   SPARKLES
+===================================================== */
+
+.score-page .sparkle {
+
+    position: absolute;
+
+    color: #F5D5E0;
+
+    font-size: 30px;
+
+    opacity: 0.7;
+
+    z-index: 0;
+
+    animation: sparkleFloat 3s ease-in-out infinite;
+
+}
+
+
+.score-page .sparkle-1 {
+
+    top: 170px;
+
+    left: 25%;
+
+}
+
+
+.score-page .sparkle-2 {
+
+    top: 230px;
+
+    right: 28%;
+
+    font-size: 38px;
+
+    animation-delay: 0.8s;
+
+}
+
+
+.score-page .sparkle-3 {
+
+    top: 450px;
+
+    left: 15%;
+
+    animation-delay: 1.5s;
+
+}
+
+
+@keyframes sparkleFloat {
+
+    0%,
+    100% {
+
+        transform: translateY(0) scale(1);
+
+        opacity: 0.45;
+
+    }
+
+    50% {
+
+        transform: translateY(-12px) scale(1.15);
+
+        opacity: 0.9;
+
+    }
+
+}
+
+
+/* =====================================================
+   RESULT HEADING
+===================================================== */
+
+.result-heading {
+
+    position: relative;
+
+    z-index: 2;
+
+    margin-bottom: 28px;
+
+}
+
+
+.result-small {
+
+    margin: 0 0 5px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    color: #F5D5E0;
+
+}
+
+
+.result-heading h1 {
+
+    margin: 0;
+
+    font-family: "Baloo 2", cursive;
+
+    font-size: clamp(65px, 9vw, 105px);
+
+    line-height: 0.95;
+
+    font-weight: 800;
+
+    color: #F5D5E0;
+
+    text-shadow:
+        0 6px 0 #7B337E,
+        0 0 35px rgba(245, 213, 224, 0.2);
+
+}
+
+
+.result-heading h2 {
+
+    margin: 8px 0 0;
+
+    font-family: "Baloo 2", cursive;
+
+    font-size: 24px;
+
+    font-weight: 600;
+
+    color: #F5D5E0;
+
+}
+
+
+/* =====================================================
+   FINAL SCORE CARD
+===================================================== */
+
+.final-score-card {
+
+    position: relative;
+
+    z-index: 3;
+
+    width: min(430px, 90vw);
+
+    box-sizing: border-box;
+
+    padding: 28px 30px 25px;
+
+    border-radius: 35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(245, 213, 224, 0.15),
+            rgba(102, 103, 171, 0.18)
+        );
+
+    border: 2px solid rgba(245, 213, 224, 0.35);
+
+    box-shadow:
+        0 20px 60px rgba(33, 6, 53, 0.4),
+        inset 0 0 30px rgba(245, 213, 224, 0.04);
+
+    backdrop-filter: blur(12px);
+
+    animation: cardAppear 0.8s ease forwards;
+
+}
+
+
+@keyframes cardAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(25px) scale(0.95);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0) scale(1);
+
+    }
+
+}
+
+
+.score-label {
+
+    margin: 0;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    color: #dca9db;
+
+}
+
+
+.final-score {
+
+    margin-top: 3px;
+
+    font-family: "Baloo 2", cursive;
+
+    font-size: 90px;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    color: #F5D5E0;
+
+    text-shadow:
+        0 5px 0 #7B337E,
+        0 0 30px rgba(245, 213, 224, 0.35);
+
+}
+
+
+.score-points {
+
+    margin: -3px 0 10px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    color: #dca9db;
+
+}
+
+
+.score-message {
+
+    display: inline-block;
+
+    padding: 8px 18px;
+
+    border-radius: 20px;
+
+    background: rgba(33, 6, 53, 0.4);
+
+    color: #F5D5E0;
+
+    font-family: "Baloo 2", cursive;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+}
+
+
+/* =====================================================
+   RESULT STATS
+===================================================== */
+
+.result-stats {
+
+    position: relative;
+
+    z-index: 3;
+
+    width: min(800px, 95vw);
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-top: 22px;
+
+}
+
+
+.result-stat {
+
+    padding: 17px 10px;
+
+    border-radius: 22px;
+
+    background:
+        rgba(33, 6, 53, 0.45);
+
+    border: 1px solid rgba(245, 213, 224, 0.2);
+
+    box-shadow:
+        0 10px 25px rgba(33, 6, 53, 0.2);
+
+    transition: 0.3s ease;
+
+}
+
+
+.result-stat:hover {
+
+    transform: translateY(-5px);
+
+    background:
+        rgba(123, 51, 126, 0.5);
+
+}
+
+
+.stat-number {
+
+    display: block;
+
+    font-family: "Baloo 2", cursive;
+
+    font-size: 31px;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    color: #F5D5E0;
+
+}
+
+
+.stat-name {
+
+    display: block;
+
+    margin-top: 5px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 10px;
+
+    line-height: 1.4;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    color: #dca9db;
+
+}
+
+
+/* =====================================================
+   ACHIEVEMENT CARD
+===================================================== */
+
+.achievement-card {
+
+    position: relative;
+
+    z-index: 3;
+
+    width: min(650px, 92vw);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    box-sizing: border-box;
+
+    margin-top: 25px;
+
+    padding: 20px 25px;
+
+    text-align: left;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(123, 51, 126, 0.55),
+            rgba(102, 103, 171, 0.45)
+        );
+
+    border: 1px solid rgba(245, 213, 224, 0.3);
+
+    box-shadow:
+        0 15px 35px rgba(33, 6, 53, 0.3);
+
+}
+
+
+.achievement-icon {
+
+    width: 65px;
+
+    height: 65px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background: rgba(245, 213, 224, 0.12);
+
+    font-size: 34px;
+
+}
+
+
+.achievement-title {
+
+    margin: 0;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #dca9db;
+
+}
+
+
+.achievement-content h3 {
+
+    margin: 2px 0;
+
+    font-family: "Baloo 2", cursive;
+
+    font-size: 27px;
+
+    color: #F5D5E0;
+
+}
+
+
+.achievement-content p:last-child {
+
+    margin: 0;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 13px;
+
+    color: #efd5e7;
+
+}
+
+
+/* =====================================================
+   USELESS VERDICT
+===================================================== */
+
+.verdict-section {
+
+    position: relative;
+
+    z-index: 3;
+
+    width: min(600px, 90vw);
+
+    margin-top: 27px;
+
+}
+
+
+.verdict-label {
+
+    margin: 0 0 10px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #dca9db;
+
+}
+
+
+/* Meter */
+
+.useless-meter {
+
+    width: 100%;
+
+    height: 17px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background:
+        rgba(33, 6, 53, 0.6);
+
+    border: 1px solid rgba(245, 213, 224, 0.25);
+
+}
+
+
+.useless-meter-fill {
+
+    width: 0;
+
+    height: 100%;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #6667AB,
+            #7B337E,
+            #F5D5E0
+        );
+
+    transition:
+        width 1.8s cubic-bezier(
+            0.25,
+            1,
+            0.5,
+            1
+        );
+
+}
+
+
+.useless-percentage {
+
+    margin-top: 9px;
+
+    font-family: "Baloo 2", cursive;
+
+    font-size: 26px;
+
+    font-weight: 800;
+
+    color: #F5D5E0;
+
+}
+
+
+.verdict-text {
+
+    max-width: 500px;
+
+    margin: 2px auto 0;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    color: #e7c8df;
+
+}
+
+
+/* =====================================================
+   POTATO SECTION
+===================================================== */
+
+.potato-section {
+
+    position: relative;
+
+    z-index: 3;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-top: 25px;
+
+}
+
+
+/* Potato */
+
+.score-page .potato {
+
+    position: relative;
+
+    width: 82px;
+
+    height: 68px;
+
+    border-radius: 48% 52% 45% 55%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #dba06e,
+            #b87548
+        );
+
+    box-shadow:
+        inset -8px -8px 15px rgba(66, 13, 75, 0.2),
+        0 12px 30px rgba(33, 6, 53, 0.35);
+
+    transform: rotate(-5deg);
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+}
+
+
+.score-page .potato:hover {
+
+    transform:
+        rotate(5deg)
+        translateY(-5px)
+        scale(1.05);
+
+}
+
+
+.potato-eye {
+
+    position: absolute;
+
+    width: 9px;
+
+    height: 11px;
+
+    border-radius: 50%;
+
+    background: #210635;
+
+    top: 25px;
+
+}
+
+
+.left-eye {
+
+    left: 25px;
+
+}
+
+
+.right-eye {
+
+    right: 25px;
+
+}
+
+
+.potato-mouth {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 14px;
+
+    width: 18px;
+
+    height: 8px;
+
+    transform: translateX(-50%);
+
+    border-bottom: 3px solid #210635;
+
+    border-radius: 50%;
+
+}
+
+
+/* Potato speech */
+
+.potato-speech {
+
+    max-width: 300px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 10px 17px;
+
+    border-radius: 18px;
+
+    background:
+        rgba(245, 213, 224, 0.12);
+
+    border: 1px solid rgba(245, 213, 224, 0.2);
+
+}
+
+
+.potato-speech span {
+
+    font-size: 20px;
+
+}
+
+
+.potato-speech p {
+
+    margin: 0;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 12px;
+
+    line-height: 1.4;
+
+    color: #F5D5E0;
+
+    text-align: left;
+
+}
+
+
+/* Potato shake */
+
+.potato-shake {
+
+    animation: potatoShake 0.5s ease;
+
+}
+
+
+@keyframes potatoShake {
+
+    0% {
+        transform: rotate(-5deg);
+    }
+
+    25% {
+        transform: rotate(10deg);
+    }
+
+    50% {
+        transform: rotate(-10deg);
+    }
+
+    75% {
+        transform: rotate(8deg);
+    }
+
+    100% {
+        transform: rotate(-5deg);
+    }
+
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.score-buttons {
+
+    position: relative;
+
+    z-index: 3;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 28px;
+
+}
+
+
+.score-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 160px;
+
+    padding: 13px 24px;
+
+    box-sizing: border-box;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s ease;
+
+}
+
+
+/* Play Again */
+
+.play-again-button {
+
+    color: #210635;
+
+    background: #F5D5E0;
+
+    box-shadow:
+        0 8px 25px rgba(245, 213, 224, 0.2);
+
+}
+
+
+.play-again-button:hover {
+
+    transform: translateY(-4px) scale(1.03);
+
+    box-shadow:
+        0 12px 30px rgba(245, 213, 224, 0.3);
+
+}
+
+
+/* Home */
+
+.home-button {
+
+    color: #F5D5E0;
+
+    background: transparent;
+
+    border: 2px solid #F5D5E0;
+
+}
+
+
+.home-button:hover {
+
+    color: #210635;
+
+    background: #F5D5E0;
+
+    transform: translateY(-4px);
+
+}
+
+
+/* =====================================================
+   BOTTOM MESSAGE
+===================================================== */
+
+.bottom-score-text {
+
+    position: relative;
+
+    z-index: 3;
+
+    margin: 20px 0 0;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    color: rgba(245, 213, 224, 0.55);
+
+}
+
+
+/* =====================================================
+   CONFETTI
+===================================================== */
+
+#confetti-container {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 50;
+
+}
+
+
+.confetti-piece {
+
+    position: absolute;
+
+    top: -20px;
+
+    width: 8px;
+
+    height: 14px;
+
+    border-radius: 2px;
+
+    background: #F5D5E0;
+
+    animation:
+        confettiFall
+        3s
+        linear
+        forwards;
+
+}
+
+
+.confetti-piece:nth-child(3n) {
+
+    background: #6667AB;
+
+}
+
+
+.confetti-piece:nth-child(3n + 1) {
+
+    background: #7B337E;
+
+}
+
+
+.confetti-piece:nth-child(4n) {
+
+    background: #dca9db;
+
+}
+
+
+@keyframes confettiFall {
+
+    0% {
+
+        transform:
+            translateY(-20px)
+            rotate(0deg);
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE — TABLET
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .score-page .navbar {
+
+        padding: 0 5%;
+
+    }
+
+
+    .score-page .nav-links {
+
+        gap: 20px;
+
+    }
+
+
+    .score-page .nav-links a {
+
+        font-size: 13px;
+
+    }
+
+
+    .result-stats {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .achievement-card {
+
+        width: min(600px, 90vw);
+
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE — MOBILE
+===================================================== */
+
+@media (max-width: 550px) {
+
+    .score-page .navbar {
+
+        min-height: 75px;
+
+        padding: 0 20px;
+
+    }
+
+
+    .score-page .nav-logo {
+
+        font-size: 19px;
+
+    }
+
+
+    .score-page .nav-links {
+
+        gap: 12px;
+
+    }
+
+
+    .score-page .nav-links a {
+
+        font-size: 9px;
+
+    }
+
+
+    .score-container {
+
+        padding-top: 40px;
+
+    }
+
+
+    .result-heading h1 {
+
+        font-size: 65px;
+
+    }
+
+
+    .result-heading h2 {
+
+        font-size: 18px;
+
+    }
+
+
+    .final-score {
+
+        font-size: 75px;
+
+    }
+
+
+    .result-stats {
+
+        gap: 9px;
+
+    }
+
+
+    .result-stat {
+
+        padding: 14px 6px;
+
+    }
+
+
+    .stat-number {
+
+        font-size: 26px;
+
+    }
+
+
+    .achievement-card {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 20px;
+
+    }
+
+
+    .achievement-content p:last-child {
+
+        text-align: center;
+
+    }
+
+
+    .potato-section {
+
+        flex-direction: column;
+
+    }
+
+
+    .potato-speech {
+
+        max-width: 260px;
+
+    }
+
+
+    .score-buttons {
+
+        flex-direction: column;
+
+        width: 80%;
+
+    }
+
+
+    .score-button {
+
+        width: 100%;
+
+    }
+
+
+    .score-page .floating-letter {
+
+        display: none;
+
+    }
+
+
+    .score-page .sparkle-3 {
+
+        display: none;
+
+    }
+
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>WORDN'T — Play</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body class="game-page">
+
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            WORD<span>N</span>’T
+        </a>
+
+        <nav class="nav-links">
+
+            <a href="index.html">
+                HOME
+            </a>
+
+            <a href="how-to-play.html">
+                HOW TO PLAY
+            </a>
+
+            <a href="about.html">
+                ABOUT
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- GAME -->
+
+    <main class="game-container">
+
+        <h1 class="game-title">
+            WORDN’T
+        </h1>
+
+
+        <p class="game-subtitle">
+            Type a word. just not that letter.
+        </p>
+
+
+        <!-- CURRENT FORBIDDEN LETTER -->
+
+        <div class="forbidden-container">
+
+            <p>
+                DON'T TYPE
+            </p>
+
+            <div id="forbiddenLetter">
+                A
+            </div>
+
+        </div>
+
+
+        <!-- SCORE -->
+
+        <div class="stats">
+
+            <div class="stat-box">
+
+                <span>
+                    SCORE
+                </span>
+
+                <strong id="score">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="stat-box">
+
+                <span>
+                    LIVES
+                </span>
+
+                <strong id="lives">
+                    ❤️❤️❤️
+                </strong>
+
+            </div>
+
+
+            <div class="stat-box">
+
+                <span>
+                    TIME
+                </span>
+
+                <strong id="timer">
+                    30
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- INPUT -->
+
+        <div class="input-area">
+
+            <input
+                type="text"
+                id="wordInput"
+                placeholder="Type a word..."
+                autocomplete="off"
+            >
+
+            <button id="submitWord">
+                SUBMIT
+            </button>
+
+        </div>
+
+
+        <!-- FEEDBACK -->
+
+        <div id="feedback"
+             class="feedback">
+
+            Type a word to begin...
+
+        </div>
+
+
+
+        <!-- BACK -->
+
+        <a href="index.html"
+           class="back-home">
+
+            ← Back to uselessness
+
+        </a>
+
+    </main>
+
+
+    <script src="play.js"></script>
+
+</body>
+
+</html>

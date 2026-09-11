@@ -1,0 +1,1475 @@
+/* =====================================================
+   WORDN'T
+   MAIN WEBSITE STYLES
+===================================================== */
+
+
+/* ================= ROOT ================= */
+
+:root {
+
+    --pink: #F5D5E0;
+
+    --lavender: #6667AB;
+
+    --purple: #7B337E;
+
+    --dark-purple: #420D4B;
+
+    --deep-purple: #210635;
+
+}
+
+
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    font-family: "Poppins", sans-serif;
+
+    color: var(--pink);
+
+    overflow-x: hidden;
+
+}
+
+
+/* ================= HOME BACKGROUND ================= */
+
+.home-page {
+
+    min-height: 100vh;
+
+    position: relative;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 40%,
+            rgba(123, 51, 126, 0.35),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(102, 103, 171, 0.20),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #210635 0%,
+            #420D4B 35%,
+            #210635 70%,
+            #7B337E 120%
+        );
+
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+
+    position: relative;
+
+    z-index: 100;
+
+    height: 90px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            rgba(123, 51, 126, 0.75),
+            rgba(66, 13, 75, 0.45)
+        );
+
+    border-bottom-left-radius: 50% 25%;
+    border-bottom-right-radius: 30% 20%;
+
+}
+
+
+/* ================= LOGO ================= */
+
+.logo {
+
+    text-decoration: none;
+
+    font-family: "Baloo 2", cursive;
+
+    font-size: 42px;
+
+    font-weight: 800;
+
+    letter-spacing: -2px;
+
+    color: var(--pink);
+
+    text-shadow:
+        0 0 10px rgba(245, 213, 224, 0.5),
+        0 0 25px rgba(245, 213, 224, 0.2);
+
+}
+
+
+.logo span {
+
+    position: relative;
+
+}
+
+
+/* ================= NAV LINKS ================= */
+
+.nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 55px;
+
+}
+
+
+.nav-links a {
+
+    text-decoration: none;
+
+    color: var(--pink);
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+
+}
+
+
+.nav-links a:hover {
+
+    color: white;
+
+    text-shadow:
+        0 0 10px var(--pink);
+
+    transform: translateY(-2px);
+
+}
+
+
+.useless-icon {
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--pink);
+
+    font-size: 34px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.useless-icon:hover {
+
+    transform: rotate(20deg) scale(1.15);
+
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+
+    position: relative;
+
+    min-height: calc(100vh - 90px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding-top: 70px;
+
+}
+
+
+/* ================= TITLE ================= */
+
+.main-title {
+
+    font-family: "Baloo 2", cursive;
+
+    font-size: clamp(80px, 11vw, 170px);
+
+    line-height: 0.9;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    color: var(--pink);
+
+    text-shadow:
+
+        0 5px 0 #7B337E,
+
+        0 10px 25px rgba(0, 0, 0, 0.4),
+
+        0 0 35px rgba(245, 213, 224, 0.25);
+
+    animation: titleFloat 4s ease-in-out infinite;
+
+}
+
+
+.main-title span {
+
+    display: inline-block;
+
+    color: #F5D5E0;
+
+}
+
+
+/* ================= CROWN ================= */
+
+.crown {
+
+    font-size: 50px;
+
+    margin-bottom: -10px;
+
+    animation: crownFloat 3s ease-in-out infinite;
+
+    text-shadow:
+        0 0 15px var(--pink);
+
+}
+
+
+/* ================= TAGLINE ================= */
+
+.tagline {
+
+    margin-top: 35px;
+
+    font-family: "Baloo 2", cursive;
+
+    font-size: clamp(28px, 3vw, 48px);
+
+    font-weight: 600;
+
+    color: var(--pink);
+
+    text-shadow:
+        0 0 15px rgba(245, 213, 224, 0.25);
+
+}
+
+
+.sub-tagline {
+
+    margin-top: 10px;
+
+    font-family: "Baloo 2", cursive;
+
+    font-size: 21px;
+
+    color: #dca9db;
+
+}
+
+
+/* ================= PLAY BUTTON ================= */
+
+.play-button {
+
+    margin-top: 45px;
+
+    width: 390px;
+
+    height: 105px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    border-radius: 60px;
+
+    text-decoration: none;
+
+    color: var(--pink);
+
+    font-family: "Baloo 2", cursive;
+
+    font-size: 34px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #6667AB,
+            #7B337E
+        );
+
+    border: 4px solid #db6cc8;
+
+    box-shadow:
+
+        0 0 15px rgba(245, 213, 224, 0.5),
+
+        0 0 35px rgba(123, 51, 126, 0.8),
+
+        inset 0 0 25px rgba(245, 213, 224, 0.15);
+
+    transition: 0.35s;
+
+}
+
+
+.play-button:hover {
+
+    transform: scale(1.07);
+
+    box-shadow:
+
+        0 0 20px #F5D5E0,
+
+        0 0 50px #7B337E,
+
+        0 0 80px rgba(102, 103, 171, 0.6);
+
+}
+
+
+.play-icon {
+
+    font-size: 30px;
+
+}
+
+
+/* ================= USELESS FACT ================= */
+
+.useless-fact {
+
+    position: absolute;
+
+    left: 5%;
+
+    bottom: 90px;
+
+    width: 210px;
+
+    min-height: 230px;
+
+    padding: 35px 20px 20px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #F5D5E0,
+            #e5acd0
+        );
+
+    color: #420D4B;
+
+    transform: rotate(-8deg);
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.35);
+
+    font-family: "Baloo 2", cursive;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+}
+
+
+.tape {
+
+    position: absolute;
+
+    width: 80px;
+
+    height: 25px;
+
+    top: -10px;
+
+    left: 65px;
+
+    background: rgba(245, 213, 224, 0.65);
+
+    transform: rotate(-3deg);
+
+}
+
+
+.tiny-face {
+
+    font-size: 25px;
+
+    margin-top: 5px;
+
+}
+
+
+/* ================= POTATO ================= */
+
+.potato-container {
+
+    position: absolute;
+
+    right: 5%;
+
+    bottom: 50px;
+
+    width: 300px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.potato-container:hover {
+
+    transform: translateY(-15px) rotate(3deg);
+
+}
+
+
+.potato {
+
+    position: relative;
+
+    width: 220px;
+
+    height: 170px;
+
+    margin: auto;
+
+    border-radius: 48% 52% 45% 55%;
+
+    background:
+
+        radial-gradient(
+            circle at 35% 30%,
+            #e8b37d,
+            #b56c63 70%
+        );
+
+    box-shadow:
+
+        inset -20px -20px 30px rgba(66, 13, 75, 0.35),
+
+        0 15px 25px rgba(0, 0, 0, 0.4);
+
+}
+
+
+.potato-face {
+
+    position: absolute;
+
+    top: 55px;
+
+    left: 65px;
+
+    display: flex;
+
+    gap: 55px;
+
+}
+
+
+.eye {
+
+    width: 22px;
+
+    height: 30px;
+
+    border-radius: 50%;
+
+    background: #210635;
+
+}
+
+
+.potato-mouth {
+
+    position: absolute;
+
+    top: 35px;
+
+    left: 35px;
+
+    font-size: 35px;
+
+    color: #210635;
+
+}
+
+
+.potato-arm {
+
+    position: absolute;
+
+    width: 50px;
+
+    height: 12px;
+
+    background: #7B337E;
+
+    border-radius: 20px;
+
+}
+
+
+.left-arm {
+
+    left: -25px;
+
+    top: 105px;
+
+    transform: rotate(-25deg);
+
+}
+
+
+.right-arm {
+
+    right: -25px;
+
+    top: 105px;
+
+    transform: rotate(25deg);
+
+}
+
+
+.potato-crown {
+
+    position: absolute;
+
+    top: -40px;
+
+    right: 55px;
+
+    font-size: 55px;
+
+    color: var(--pink);
+
+}
+
+
+.potato-caption {
+
+    margin-top: 10px;
+
+    text-align: right;
+
+    font-family: "Baloo 2", cursive;
+
+    font-size: 18px;
+
+    color: var(--pink);
+
+}
+
+
+/* ================= FLOATING LETTERS ================= */
+
+.floating-letter {
+
+    position: absolute;
+
+    font-family: "Baloo 2", cursive;
+
+    font-size: 90px;
+
+    font-weight: 800;
+
+    color: #6667AB;
+
+    text-shadow:
+
+        5px 7px 0 #420D4B,
+
+        0 0 25px rgba(102, 103, 171, 0.4);
+
+    opacity: 0.85;
+
+    animation: floatingLetter 5s ease-in-out infinite;
+
+}
+
+
+.letter-r {
+
+    top: 130px;
+
+    left: 15%;
+
+}
+
+
+.letter-q {
+
+    top: 230px;
+
+    left: 3%;
+
+    font-size: 110px;
+
+}
+
+
+.letter-z {
+
+    top: 300px;
+
+    right: 6%;
+
+}
+
+
+.letter-b {
+
+    top: 500px;
+
+    left: 19%;
+
+    font-size: 70px;
+
+}
+
+
+.letter-k {
+
+    top: 500px;
+
+    right: 10%;
+
+}
+
+
+/* ================= SPARKLES ================= */
+
+.sparkle {
+
+    position: absolute;
+
+    font-size: 30px;
+
+    color: var(--pink);
+
+    animation: sparkle 2s ease-in-out infinite;
+
+}
+
+
+.sparkle-1 {
+    top: 160px;
+    left: 32%;
+}
+
+.sparkle-2 {
+    top: 170px;
+    right: 37%;
+}
+
+.sparkle-3 {
+    top: 390px;
+    left: 14%;
+}
+
+.sparkle-4 {
+    top: 560px;
+    right: 25%;
+}
+
+
+/* ================= CROSS ================= */
+
+.cross-decoration {
+
+    position: absolute;
+
+    top: 150px;
+
+    right: 13%;
+
+    font-size: 100px;
+
+    color: #e75c9f;
+
+    text-shadow:
+        0 0 20px #e75c9f;
+
+    transform: rotate(20deg);
+
+}
+
+
+/* ================= PLANET ================= */
+
+.planet {
+
+    position: absolute;
+
+    top: 420px;
+
+    right: 22%;
+
+    font-size: 100px;
+
+    color: #7B337E;
+
+    transform: rotate(-20deg);
+
+}
+
+
+/* ================= BOTTOM MESSAGE ================= */
+
+.bottom-message {
+
+    position: absolute;
+
+    bottom: 20px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-family: "Baloo 2", cursive;
+
+    color: var(--pink);
+
+    font-size: 16px;
+
+}
+
+
+.message-line {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.message-line span {
+
+    width: 80px;
+
+    height: 2px;
+
+    background: #7B337E;
+
+}
+
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes titleFloat {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+}
+
+
+@keyframes crownFloat {
+
+    0%, 100% {
+        transform: translateY(0) rotate(-3deg);
+    }
+
+    50% {
+        transform: translateY(-8px) rotate(3deg);
+    }
+
+}
+
+
+@keyframes floatingLetter {
+
+    0%, 100% {
+        transform: translateY(0) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+
+}
+
+
+@keyframes sparkle {
+
+    0%, 100% {
+        opacity: 0.4;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .useless-fact {
+        display: none;
+    }
+
+    .potato-container {
+        opacity: 0.5;
+        right: -40px;
+    }
+
+    .floating-letter {
+        opacity: 0.35;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 0 5%;
+        height: 75px;
+    }
+
+    .logo {
+        font-size: 30px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        display: none;
+    }
+
+    .hero {
+        padding-top: 80px;
+    }
+
+    .main-title {
+        font-size: 70px;
+    }
+
+    .tagline {
+        font-size: 25px;
+        padding: 0 20px;
+    }
+
+    .sub-tagline {
+        font-size: 15px;
+        padding: 0 25px;
+    }
+
+    .play-button {
+        width: 280px;
+        height: 80px;
+        font-size: 25px;
+    }
+
+    .potato-container {
+        transform: scale(0.7);
+        right: -80px;
+        bottom: 20px;
+    }
+
+}
+
+/* =====================================================
+   GAME PAGE
+   Rewritten so the whole game (title, forbidden-letter
+   box, stats, input box, submit button, feedback, level,
+   back-home link) fits inside the first viewport on a
+   normal laptop screen, with no scroll needed.
+
+   Approach: .game-container is a flex column that fills
+   the space below the navbar and centers its content
+   vertically. Spacing and font sizes are tightened and
+   made fluid (clamp/vh) so the whole stack is shorter.
+   min-height (not a hard height) is kept on .game-page so
+   that on a genuinely too-short viewport the page still
+   scrolls normally instead of clipping content.
+===================================================== */
+
+.game-page {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            rgba(123, 51, 126, 0.35),
+            transparent 40%
+        ),
+
+        linear-gradient(
+            135deg,
+            #210635,
+            #420D4B,
+            #7B337E
+        );
+
+}
+
+
+/* ================= GAME CONTAINER ================= */
+
+.game-container {
+
+    flex: 1;
+
+    min-height: calc(100vh - 90px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: clamp(14px, 3.5vh, 32px) 20px;
+
+    gap: clamp(12px, 2.4vh, 24px);
+
+}
+
+
+.game-title {
+
+    font-family: "Baloo 2", cursive;
+
+    font-size: clamp(56px, 7vw, 96px);
+
+    line-height: 1;
+
+    color: #F5D5E0;
+
+    text-shadow:
+        0 4px 0 #7B337E,
+        0 0 25px rgba(245, 213, 224, 0.3);
+
+}
+
+
+.game-subtitle {
+
+    font-family: "Baloo 2", cursive;
+
+    font-size: clamp(18px, 2.2vw, 25px);
+
+    color: #F5D5E0;
+
+}
+
+
+/* ================= FORBIDDEN LETTERS ================= */
+
+.forbidden-container {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 6px;
+
+}
+
+
+.forbidden-container p {
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    color: #dca9db;
+
+}
+
+
+/*
+   This box now supports
+   1 to 5 forbidden letters.
+*/
+
+#forbiddenLetter {
+
+    min-width: 115px;
+
+    min-height: 115px;
+
+    padding: 14px 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    border-radius: 28px;
+
+    font-family: "Baloo 2", cursive;
+
+    font-size: clamp(38px, 5vw, 52px);
+
+    font-weight: 800;
+
+    letter-spacing: 4px;
+
+    white-space: nowrap;
+
+    color: #F5D5E0;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #7B337E,
+            #6667AB
+        );
+
+    border: 3px solid #F5D5E0;
+
+    box-shadow:
+
+        0 0 20px rgba(245, 213, 224, 0.35);
+
+}
+
+
+/* ================= STATS ================= */
+
+.stats {
+
+    display: flex;
+
+    gap: 14px;
+
+}
+
+
+.stat-box {
+
+    min-width: 115px;
+
+    padding: 14px 20px;
+
+    border-radius: 18px;
+
+    background:
+        rgba(33, 6, 53, 0.65);
+
+    border: 1px solid #7B337E;
+
+}
+
+
+.stat-box span {
+
+    display: block;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    color: #dca9db;
+
+}
+
+
+.stat-box strong {
+
+    display: block;
+
+    margin-top: 5px;
+
+    font-family: "Baloo 2", cursive;
+
+    font-size: 24px;
+
+    color: #F5D5E0;
+
+}
+
+
+/* ================= INPUT ================= */
+
+.input-area {
+
+    display: flex;
+
+    gap: 12px;
+
+}
+
+
+#wordInput {
+
+    width: min(400px, 78vw);
+
+    height: 62px;
+
+    padding: 0 25px;
+
+    border-radius: 32px;
+
+    outline: none;
+
+    border: 3px solid #7B337E;
+
+    background: rgba(245, 213, 224, 0.08);
+
+    color: #F5D5E0;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 18px;
+
+}
+
+
+#wordInput::placeholder {
+
+    color: #b88eb9;
+
+}
+
+
+#wordInput:focus {
+
+    border-color: #F5D5E0;
+
+    box-shadow:
+        0 0 18px rgba(245, 213, 224, 0.3);
+
+}
+
+
+#submitWord {
+
+    height: 62px;
+
+    padding: 0 30px;
+
+    border: none;
+
+    border-radius: 32px;
+
+    cursor: pointer;
+
+    font-family: "Baloo 2", cursive;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    color: #F5D5E0;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #6667AB,
+            #7B337E
+        );
+
+    border: 2px solid #F5D5E0;
+
+    transition: 0.3s;
+
+}
+
+
+#submitWord:hover {
+
+    transform: scale(1.05);
+
+    box-shadow:
+        0 0 20px rgba(245, 213, 224, 0.4);
+
+}
+
+
+/* Disabled submit button */
+
+#submitWord:disabled {
+
+    opacity: 0.5;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow: none;
+
+}
+
+
+/* ================= FEEDBACK ================= */
+
+.feedback {
+
+    min-height: 26px;
+
+    font-family: "Baloo 2", cursive;
+
+    font-size: 20px;
+
+    color: #F5D5E0;
+
+}
+
+
+/* ================= LEVEL ================= */
+
+.level {
+
+    color: #dca9db;
+
+    letter-spacing: 2px;
+
+    font-size: 16px;
+
+}
+
+
+.level span {
+
+    color: #F5D5E0;
+
+    font-weight: 700;
+
+}
+
+
+/* ================= BACK ================= */
+
+.back-home {
+
+    color: #dca9db;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+
+}
+
+
+.back-home:hover {
+
+    color: #F5D5E0;
+
+}
+
+
+/* ================= SHORT VIEWPORTS =================
+   Laptops with reduced browser-window height (~700px
+   and under) get an extra squeeze so everything still
+   fits without scrolling. */
+
+@media (max-height: 700px) {
+
+    .game-container {
+        gap: clamp(6px, 1.4vh, 14px);
+        padding: 10px 20px;
+    }
+
+    .game-title {
+        font-size: clamp(42px, 6vw, 64px);
+    }
+
+    #forbiddenLetter {
+        min-width: 90px;
+        min-height: 90px;
+        font-size: clamp(28px, 4vw, 38px);
+    }
+
+    .stat-box {
+        padding: 10px 14px;
+    }
+
+    .stat-box strong {
+        font-size: 20px;
+    }
+
+    #wordInput,
+    #submitWord {
+        height: 54px;
+    }
+}
+
+
+/* ================= MOBILE GAME ================= */
+
+@media (max-width: 600px) {
+
+    .game-container {
+
+        padding: 14px 15px;
+
+        gap: 12px;
+
+    }
+
+
+    .game-title {
+
+        font-size: clamp(42px, 11vw, 60px);
+
+    }
+
+
+    .game-subtitle {
+
+        font-size: 17px;
+
+    }
+
+
+    #forbiddenLetter {
+
+        min-width: 90px;
+
+        min-height: 90px;
+
+        padding: 10px 18px;
+
+        font-size: 34px;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    .input-area {
+
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+
+
+    #wordInput {
+
+        width: min(300px, 85vw);
+
+    }
+
+
+    .stats {
+
+        gap: 8px;
+
+    }
+
+
+    .stat-box {
+
+        min-width: 80px;
+
+        padding: 8px 8px;
+
+    }
+
+}

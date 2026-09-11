@@ -1,0 +1,186 @@
+/* =====================================================
+   🤖 WORDN'T AI — PLAYER PERSONALITY
+   Styled entirely with the site's existing theme
+   variables (--pink, --lavender, --purple, --dark-purple,
+   --deep-purple) and fonts (Baloo 2 / Poppins), so it
+   matches the rest of WORDN'T without touching score.css.
+===================================================== */
+
+.ai-personality-card {
+    max-width: 640px;
+    margin: 40px auto;
+    padding: 32px 28px;
+    border-radius: 28px;
+
+    background: linear-gradient(160deg, var(--dark-purple), var(--deep-purple));
+    border: 3px solid var(--lavender);
+    box-shadow: 0 10px 0 rgba(0, 0, 0, 0.25);
+
+    text-align: center;
+    color: var(--pink);
+}
+
+.ai-eyebrow {
+    font-family: "Baloo 2", sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 0.95rem;
+    color: var(--lavender);
+    margin-bottom: 4px;
+}
+
+.ai-heading {
+    font-family: "Baloo 2", sans-serif;
+    font-weight: 800;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+
+.ai-result-emoji {
+    font-size: 3.2rem;
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+.ai-result-title {
+    font-family: "Baloo 2", sans-serif;
+    font-weight: 800;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    color: var(--pink);
+    margin-bottom: 10px;
+}
+
+.ai-result-quote {
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--lavender);
+    margin-bottom: 14px;
+}
+
+.ai-result-description {
+    font-size: 0.98rem;
+    line-height: 1.5;
+    color: var(--pink);
+    opacity: 0.9;
+    max-width: 480px;
+    margin: 0 auto 26px auto;
+}
+
+/* ---- confidence meter ---- */
+
+.ai-confidence {
+    margin-bottom: 28px;
+}
+
+.ai-confidence-label {
+    font-family: "Baloo 2", sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    color: var(--lavender);
+    margin-bottom: 8px;
+}
+
+.ai-confidence-bar {
+    width: 100%;
+    height: 16px;
+    border-radius: 999px;
+    background: rgba(245, 213, 224, 0.15);
+    overflow: hidden;
+    border: 2px solid var(--lavender);
+}
+
+.ai-confidence-fill {
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--purple), var(--pink));
+    transition: width 1s ease;
+}
+
+.ai-confidence-value {
+    margin-top: 8px;
+    font-family: "Baloo 2", sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--pink);
+}
+
+/* ---- stat grid ---- */
+
+.ai-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.ai-stat {
+    background: rgba(245, 213, 224, 0.08);
+    border: 2px solid var(--lavender);
+    border-radius: 14px;
+    padding: 12px 6px;
+}
+
+.ai-stat span {
+    display: block;
+    font-family: "Baloo 2", sans-serif;
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: var(--pink);
+}
+
+.ai-stat label {
+    display: block;
+    margin-top: 4px;
+    font-size: 0.65rem;
+    letter-spacing: 0.5px;
+    color: var(--lavender);
+}
+
+/* ---- disclaimer ---- */
+
+.ai-disclaimer {
+    font-size: 0.8rem;
+    color: var(--lavender);
+    opacity: 0.85;
+    line-height: 1.4;
+}
+
+/* ---- "AI is confused" state ---- */
+
+.ai-confused {
+    padding: 20px 10px;
+}
+
+.ai-confused-emoji {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.ai-confused h3 {
+    font-family: "Baloo 2", sans-serif;
+    font-weight: 800;
+    letter-spacing: 1px;
+    font-size: 1.4rem;
+    color: var(--pink);
+    margin-bottom: 8px;
+}
+
+.ai-confused p {
+    color: var(--lavender);
+    font-size: 0.95rem;
+}
+
+/* ---- small screens ---- */
+
+@media (max-width: 480px) {
+    .ai-stat-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ai-personality-card {
+        padding: 26px 18px;
+        margin: 28px 16px;
+    }
+}
