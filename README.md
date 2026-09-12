@@ -1,63 +1,55 @@
-# Don't Use That Letter! — MVP
+<img width="1280" height="640" alt="git (1)" src="https://github.com/user-attachments/assets/8920b256-2ba8-4988-b824-5351134eb4bd" />
 
-A fast-paced word game: you're shown 1–3 forbidden letters and must type a real
-English word that avoids all of them before the timer runs out.
+# Wordnt 🎯
 
-This is the **core playable version** (Step 1). No ML yet — that comes next,
-as a separate, additive step, per the plan.
+## Basic Details
 
-## What's included
-- `frontend/index.html` — Home, Game, High Score, and Game Over screens
-- `frontend/style.css` — dark modern game styling, animations (shake, score
-  popups, combo banner, timer urgency)
-- `frontend/script.js` — all game logic: timer, lives, score, combo, level
-  progression (1 → 2 → 3 forbidden letters), word validation against a local
-  724-word dictionary, localStorage high score
+### Team Name: DuoX
 
-## How to run it
+### Team Members
+- Team Lead: Fathima Maha - Government Engineering College Kozhikode
+- Member 2: Hridya Sasheendran P V - Government Engineering College Kozhikode
 
-No build step, no server required strictly, but a local server avoids any
-browser quirks with `autofocus`/inputs on `file://` URLs:
+---
 
-```bash
-cd dont-use-that-letter/frontend
-python3 -m http.server 8000
-```
+## Project Description
 
-Then open: **http://localhost:8000**
+**WORDN'T** is a simple and unnecessarily challenging word game where players have to type valid English words while avoiding randomly generated forbidden letters.
 
-(Alternatively you can just double-click `index.html` — everything is
-self-contained in the three frontend files, no fetch calls, no dependencies.)
+The game starts with one forbidden letter and gradually becomes more difficult by adding more forbidden letters as the player successfully survives more words. Players have limited lives and time, making their vocabulary unexpectedly stressful.
 
-## How the game works
-- 60-second timer, 3 lives, score starts at 0.
-- Level 1 = 1 forbidden letter. After 5 correct answers → level 2 (2 letters).
-  After 10 correct → level 3 (3 letters, capped there).
-- Every generated letter combo is checked against the word list to guarantee
-  a valid word exists (verified with 6,000 randomized trials, 0 unsolvable
-  combos).
-- Scoring: +10 base, +2 per letter beyond length 3, +10 speed bonus if
-  answered within 3 seconds.
-- Wrong answer (forbidden letter used, not a real word, empty, or
-  non-alphabetic input) costs a life and resets your combo.
-- Combo milestones at x5 / x10 / x15 show a banner message.
-- Game ends on 0 lives or 0 time; final stats shown with a lightweight
-  "AI Player Analysis" panel (currently just your real stats — the ML
-  classification layer will plug into this same panel next).
-- High score (best score/combo/accuracy) is saved in `localStorage`, no
-  backend needed.
+---
 
-## Verified before handoff
-- `node -c script.js` — syntax OK
-- Word list: 724 unique valid words
-- Validation tested: empty input, numeric input, unknown strings, correct
-  rejection of forbidden-letter words, correct acceptance of valid words,
-  case-insensitivity, whitespace trimming
-- Forbidden-letter generator: 6,000 randomized trials across levels 1–3,
-  zero unsolvable combinations, zero duplicate-letter combinations
+## The Problem (that doesn't exist)
 
-## Next steps (not built yet, by design — see plan)
-1. Trap rounds, bonus rounds, shield power-up
-2. ML player-skill classifier (scikit-learn, synthetic training data) +
-   adaptive difficulty
-3. Confetti/extra polish on high score
+People can normally type English words without restrictions.
+
+This is clearly too easy.
+
+There is absolutely no reason why someone should be allowed to use every letter of the alphabet while typing a word. WORDN'T solves this completely imaginary problem by banning random letters and making ordinary vocabulary unnecessarily difficult.
+
+---
+
+## The Solution (that nobody asked for)
+
+WORDN'T randomly selects letters that the player is not allowed to use.
+
+The player must:
+
+- Find a real English word.
+- Avoid all currently forbidden letters.
+- Earn points based on word length.
+- Survive with only three lives.
+- Beat the 30-second timer.
+- Handle an increasing number of forbidden letters.
+
+The game begins with one forbidden letter and increases the difficulty as the player survives more words
+
+### Project Documentation For Software: 
+<img width="1892" height="865" alt="Screenshot 2026-09-12 053534" src="https://github.com/user-attachments/assets/8b0c21c0-4816-4b1a-bb3c-16aed7a924be" />
+<img width="1865" height="841" alt="Screenshot 2026-09-12 053709" src="https://github.com/user-attachments/assets/f497a94f-f7ed-41d3-a1b0-d1c2a9f613b8" />
+<img width="1903" height="863" alt="Screenshot 2026-09-12 053510" src="https://github.com/user-attachments/assets/174169b1-69d1-4f96-b57e-aba33124aa15" />
+<img width="1901" height="863" alt="Screenshot 2026-09-12 053426" src="https://github.com/user-attachments/assets/7b1c0585-9547-4720-9f7e-404dafb6a73e" />
+<img width="1901" height="852" alt="Screenshot 2026-09-12 053601" src="https://github.com/user-attachments/assets/94d77eb1-65c0-4abc-a7bf-e857274c557e" />
+
+ Made with ❤️ at TinkerHub Useless Projects ![Static Badge](https://img.shields.io/badge/TinkerHub-24?color=%23000000&link=https%3A%2F%2Fwww.tinkerhub.org%2F) ![Static Badge](https://img.shields.io/badge/UselessProjects--26-26?link=https%3A%2F%2Ftinkerhub.org%2Fevents%2F1M8ORET9A1%2Fuseless-projects-3.0)
